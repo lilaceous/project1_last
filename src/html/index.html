@@ -2,39 +2,38 @@
 <html>
 <include src="include/head.html"></include>
 <body>
+	<script type="text/javascript">
+		$(function(){
+			$('.main_slide').slick({
+				dots: true,
+				arrows: false,
+				dotsClass: "controls",
+				infinite: true,
+				autoplay: true,
+				speed: 500,
+				slidesToShow: 1
+			});
+		});
+	</script>
 <div class="container">
 	<include src="include/header.html"></include>
-	<div class="keyvisual">
-		<div class="key_inner">
-			<ul>
-				<li><a href="#"><img src="../img/key1.jpg" alt="key1"></a></li>
-				<li><a href="#"><img src="../img/key2.jpg" alt="key2"></a></li>
-				<li><a href="#"><img src="../img/key3.jpg" alt="key3"></a></li>
-				<li><a href="#"><img src="../img/key4.jpg" alt="key4"></a></li>
-				<li><a href="#"><img src="../img/key5.jpg" alt="key5"></a></li>
-				<li><a href="#"><img src="../img/key6.jpg" alt="key6"></a></li>
-				<li><a href="#"><img src="../img/key1.jpg" alt="key1"></a></li>
-			</ul>
-		</div>
-		<div class="controls">
-			<ul>
-				<li><a href="#">1</a></li>
-				<li><a href="#">2</a></li>
-				<li><a href="#">3</a></li>
-				<li><a href="#">4</a></li>
-				<li><a href="#">5</a></li>
-				<li><a href="#">6</a></li>
-			</ul>
-		</div>
+	<div class="main_slide">
+		<a class="slide" href="#" title=""><img src="../img/key1.jpg" alt="key1"></a>
+		<a class="slide" href="#" title=""><img src="../img/key2.jpg" alt="key2"></a>
+		<a class="slide" href="#" title=""><img src="../img/key3.jpg" alt="key3"></a>
+		<a class="slide" href="#" title=""><img src="../img/key4.jpg" alt="key4"></a>
+		<a class="slide" href="#" title=""><img src="../img/key5.jpg" alt="key5"></a>
+		<a class="slide" href="#" title=""><img src="../img/key6.jpg" alt="key6"></a>
+		<a class="slide" href="#" title=""><img src="../img/key1.jpg" alt="key1"></a>
 	</div>
-	<section id="cont_wrap">
-		<div class="content">
+	<section class="cont_wrap">
+		<div class="cont">
 			<div class="top">
 				<div class="event">
 					<a href="#"><img src="../img/event01.jpg" alt="event"></a>
 				</div>
 				<div class="product">
-					<a href="#">
+					<a href="#" title="">
 						<img src="../img/product1.jpg" class="photo" alt="product1">
 						<div class="text">
 							<h3>N Ombrer Beige nails</h3>
@@ -44,7 +43,7 @@
 					</a>
 				</div>
 				<div class="product">
-					<a href="#">
+					<a href="#" title="">
 						<img src="../img/product2.jpg" class="photo" alt="product2">
 						<div class="text">
 							<h3>N Brick nails</h3>
@@ -105,13 +104,12 @@
 				<div class="new_collection">
 					<p class="title">NEW<br>COLLECTION</p>
 					<p class="desc">Ohora가 제안하는<br>2019년 네가지 컬렉션</p>
-					<div class="collec_pager">
-						<ul>
-							<li><a href="#">1</a></li>
-							<li><a href="#">2</a></li>
-							<li><a href="#">3</a></li>
-							<li><a href="#">4</a></li>
-						</ul>
+					<ul class="collec_pager">
+						<li><a href="#" title="">1</a></li>
+						<li><a href="#" title="">2</a></li>
+						<li><a href="#" title="">3</a></li>
+						<li><a href="#" title="">4</a></li>
+					</ul>
 					</div>
 				</div>
 				<div class="collec_wrap">

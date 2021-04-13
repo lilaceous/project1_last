@@ -5,132 +5,179 @@
 	position: relative;
 }
 
-.keyvisual {
+.main_slide {
 	position: relative;
-	/* overflow: hidden; */
-	min-width: 1200px;
-	width: 100%;
-	/* height: 850px; */
-}
-.keyvisual .key_inner {
-	position: relative;
-	overflow: hidden;
-	min-width: 1200px;
 	width: 100%;
 	height: 850px;
+	.slide {
+		width: 100%;
+		height: 850px;
+	}
+	.controls {
+		position: absolute;
+		left: 0;
+		bottom: 110px;
+		width: 100%;
+		height: 17px;
+		text-align: center;
+		li {
+			display: inline-block;
+			&.slick-active button {
+				background-color: #000;
+			}
+		}
+		button {
+			display: block;
+			width: 16px;
+			height: 16px;
+			margin: 0 8px;
+			text-indent: -9999px;
+			overflow: hidden;
+			background-color: rgba(0,0,0,0.1);
+			border-radius: 8px;
+			border: none;
+		}
+	}
 }
-.keyvisual .key_inner > ul {
-	position: absolute;
-	left: 0;
-	top: 0;
-	width: 700%;
-	height: 850px;
-}
-.keyvisual .key_inner > ul > li {
-	position: relative;
-	float: left;
-	width: 14.285%;
-	height: 850px;
-	overflow: hidden;
-}
-.keyvisual .key_inner > ul > li > img {
-	position: absolute;
-	left: 50%;
-	margin-left: -1000px;
-	width: 2000px;
-}
-.keyvisual .controls {
-	position: absolute;
-	left: 0;
-	bottom: 120px;
-	width: 100%;
-	height: 15px;
-	text-align: center;
-}
-.keyvisual .controls li {
-	display: inline-block;
-}
-.keyvisual .controls li.active > a {
-	background-color: #000;
-}
-.keyvisual .controls li a {
-	display: block;
-	width: 14px;
-	height: 14px;
-	margin: 0 3px;
-	text-indent: -9999px;
-	overflow: hidden;
-	background-color: rgba(0,0,0,0.3);
-	border-radius: 7px;
-}
-#cont_wrap {
+// .main_slide {
+// 	position: relative;
+// 	/* overflow: hidden; */
+// 	min-width: 1200px;
+// 	width: 100%;
+// 	/* height: 850px; */
+// }
+// .main_slide {
+// 	position: relative;
+// 	overflow: hidden;
+// 	min-width: 1200px;
+// 	width: 100%;
+// 	height: 850px;
+// }
+// .main_slide > ul {
+// 	position: absolute;
+// 	left: 0;
+// 	top: 0;
+// 	width: 700%;
+// 	height: 850px;
+// }
+// .main_slide .key_inner > ul > li {
+// 	position: relative;
+// 	float: left;
+// 	width: 14.285%;
+// 	height: 850px;
+// 	overflow: hidden;
+// }
+// .main_slide .key_inner > ul > li > img {
+// 	position: absolute;
+// 	left: 50%;
+// 	margin-left: -1000px;
+// 	width: 2000px;
+// }
+// .main_slide .controls {
+// 	position: absolute;
+// 	left: 0;
+// 	bottom: 120px;
+// 	width: 100%;
+// 	height: 15px;
+// 	text-align: center;
+// }
+// .main_slide .controls li {
+// 	display: inline-block;
+// }
+// .main_slide .controls li.active > a {
+// 	background-color: #000;
+// }
+// .main_slide .controls li a {
+// 	display: block;
+// 	width: 14px;
+// 	height: 14px;
+// 	margin: 0 3px;
+// 	text-indent: -9999px;
+// 	overflow: hidden;
+// 	background-color: rgba(0,0,0,0.3);
+// 	border-radius: 7px;
+// }
+
+/**/ 
+.cont_wrap {
 	min-width: 1200px;
 	height: 400px;
 	position: relative;
 	margin: 0 auto;
+
+	.cont {
+		position: absolute;
+		left: 50%;
+		top: -60px;
+		margin-left: -600px;
+		width: 1200px;
+		height: 400px;
+
+		.top {
+			height: 200px;
+
+			.event {
+				float: left;
+				width: 300px;
+				height: 200px;
+				overflow: hidden;
+
+				img {
+					max-width: 100%;
+				}
+			}
+
+			.product {
+				float: left;
+				position: relative;
+				width: 200px;
+				height: 200px;
+				overflow: hidden;
+
+				> a:hover .text {
+					top: 0;
+				}
+
+				.text {
+					position: absolute;
+					left: 0;
+					top: 100%;
+					width: 100%;
+					height: 100%;
+					background-color: rgba(0, 0, 0, 0.5);
+					transition: top 0.4s;
+					text-align: center;
+				}
+			}
+
+			.find {
+				position: relative;
+				float: right;
+				padding: 25px 20px;
+				width: 260px;
+				height: 150px;
+				background-color: #e5e4dd;
+
+				p.title {
+					margin: 0 0 20px 0;
+					font-size: 20px;
+					letter-spacing: -1px;
+					color: #333;
+				}
+
+				a.more {
+					position: absolute;
+					right: 20px;
+					top: 30px;
+					font-size: 13px;
+					color: #888;
+				}
+			}
+		}
+	}
 }
-#cont_wrap .content {
-	position: absolute;
-	left: 50%;
-	top: -60px;
-	margin-left: -600px;
-	width: 1200px;
-	height: 400px;
-}
-#cont_wrap .content .top {
-	height: 200px;
-}
-#cont_wrap .content .top .event {
-	float: left;
-	width: 300px;
-	height: 200px;
-	overflow: hidden;
-}
-#cont_wrap .content .top .event img {
-	max-width: 100%;
-}
-#cont_wrap .content .top .product {
-	float: left;
-	position: relative;
-	width: 200px;
-	height: 200px;
-	overflow: hidden;
-}
-#cont_wrap .content .top .product .text {
-	position: absolute;
-	left: 0;
-	top: 100%;
-	width: 100%;
-	height: 100%;
-	background-color: rgba(0, 0, 0, 0.5);
-	transition: top 0.4s;
-	text-align: center;
-}
-#cont_wrap .content .top .product a:hover .text {
-	top: 0;
-}
-#cont_wrap .find {
-	position: relative;
-	float: right;
-	padding: 25px 20px;
-	width: 260px;
-	height: 150px;
-	background-color: #e5e4dd;
-}
-#cont_wrap .find p.title {
-	margin: 0 0 20px 0;
-	font-size: 20px;
-	letter-spacing: -1px;
-	color: #333;
-}
-#cont_wrap .find .more {
-	position: absolute;
-	right: 20px;
-	top: 30px;
-	font-size: 13px;
-	color: #888;
-}
-#cont_wrap .find .select dl.local {
+
+.cont_wrap .find .select dl.local {
 	position: relative;
 	display: block;
 	padding-left: 10px;
@@ -140,10 +187,10 @@
 	letter-spacing: -0.5px;
 	font-size: 16px;
 	font-weight: 300;
-	background: #fff url(../images/sel_arrow1.png) 96% 15px no-repeat;
+	background: #fff url(../img/sel_arrow1.png) 96% 15px no-repeat;
 	color: #666;
 }
-#cont_wrap .find .select dl.center {
+.cont_wrap .find .select dl.center {
 	position: relative;
 	display: block;
 	margin-top: 10px;
@@ -154,10 +201,10 @@
 	letter-spacing: -0.5px;
 	font-size: 16px;
 	font-weight: 300;
-	background: #a69684 url(../images/sel_arrow2.png) 96% 15px no-repeat;
+	background: #a69684 url(../img/sel_arrow2.png) 96% 15px no-repeat;
 	color: #fff;
 }
-#cont_wrap .find .select dl dt a {
+.cont_wrap .find .select dl dt a {
 	display: block;
 	position: relative;
 	/* padding-left: 10px;
@@ -169,7 +216,7 @@
 	color: #666;
 	border: 1px solid #dedede; */
 }
- #cont_wrap .find .select dl dt a span {
+ .cont_wrap .find .select dl dt a span {
 	display: inline-block;
 	position: absolute;
 	right: 10px;
@@ -177,12 +224,12 @@
 	margin-top: -3px;
 	width: 10px;
 	height: 6px;
-	background: url(../images/spr_btns.png) no-repeat -127px -73px;
+	background: url(../img/spr_btns.png) no-repeat -127px -73px;
 }
-#cont_wrap .find .select dl dt a.active span {
+.cont_wrap .find .select dl dt a.active span {
 	background-position: -127px -93px;
 }
-#cont_wrap .find .select dl dd {
+.cont_wrap .find .select dl dd {
 	display: none;
 	position: absolute;
 	left: 0;
@@ -194,61 +241,68 @@
 	background-color: #fff;
 	border: 1px solid #dedede;
 }
-#cont_wrap .find .select dl dd li {
+.cont_wrap .find .select dl dd li {
 	border-top: 1px solid #eaefe3;
 }
-#cont_wrap .find .select dl dd li:first-child {
+.cont_wrap .find .select dl dd li:first-child {
 	border-top: none;
 }
-#cont_wrap .find .select dl dd li a {
+.cont_wrap .find .select dl dd li a {
 	display: block;
 	position: relative;
 	padding-left: 31px;
 }
-#cont_wrap .find .select dl dd li a.active { /* 2019-12-11 */
+.cont_wrap .find .select dl dd li a.active { /* 2019-12-11 */
 	background-color: #f4f4f4;
 }
-#cont_wrap .find .select select {
+.cont_wrap .find .select select {
 	display: none;
 }
-#cont_wrap .bottom {
+
+/**/
+.cont_wrap .bottom {
 	width: 1200px;
 	height: 200px;
+
+	.new_collection {
+		float: left;
+		padding: 25px 20px;
+		width: 200px;
+		height: 200px;
+		box-sizing: border-box;
+		background: url("../img/camedia.jpg") no-repeat center center;
+		
+		p.title {
+			font-size: 20px;
+			font-weight: 500px;
+			color: #333;
+			line-height: 1.2;
+			font-family: "nsd";
+			letter-spacing: -0.5px;
+			margin: 0;
+		}
+
+		p.desc {
+			padding-top: 8px;
+			font-size: 14px;
+			color: #666;
+			line-height: 1.4;
+			letter-spacing: -0.5px;
+		}
+
+		.collec_pager {
+			padding-top: 30px;
+			width: 100%;
+			font-size: 0;
+			text-align: center;
+		}
+	}
 }
-#cont_wrap .bottom .new_collection {
-	float: left;
-	padding: 25px 20px;
-	width: 200px;
-	height: 200px;
-	box-sizing: border-box;
-	background: url("../images/camedia.jpg") no-repeat center center;
-}
-#cont_wrap .bottom .new_collection p.title {
-	font-size: 20px;
-	font-weight: 500px;
-	color: #333;
-	line-height: 1.2;
-	font-family: "nsd";
-	letter-spacing: -0.5px;
-	margin: 0;
-}
-#cont_wrap .bottom .new_collection p.desc {
-	padding-top: 8px;
-	font-size: 14px;
-	color: #666;
-	line-height: 1.4;
-	letter-spacing: -0.5px;
-}
-#cont_wrap .bottom .new_collection .collec_pager {
-	padding-top: 30px;
-	width: 100%;
-	font-size: 0;
-	text-align: center;
-}
-#cont_wrap .bottom .new_collection .collec_pager li {
+
+.cont_wrap .bottom .new_collection .collec_pager li {
 	display: inline-block;
 }
-#cont_wrap .bottom .new_collection .collec_pager li a {
+.cont_wrap .bottom .new_collection .collec_pager li a {
 	display: block;
 	margin: 0 3px;
 	width: 7px;
@@ -257,17 +311,17 @@
 	border-radius: 7px;
 	background-color: #999;
 }
-#cont_wrap .bottom .new_collection .collec_pager li.active a {
+.cont_wrap .bottom .new_collection .collec_pager li.active a {
 	background-color: #f90;
 }
-#cont_wrap .bottom .collec_wrap {
+.cont_wrap .bottom .collec_wrap {
 	position: relative;
 	float: left;
 	width: 400px;
 	height: 200px;
 	overflow: hidden;
 }
-#cont_wrap .bottom .collec_wrap li {
+.cont_wrap .bottom .collec_wrap li {
 	position: absolute;
 	left: 0;
 	top: 0;
@@ -276,7 +330,7 @@
 	overflow: hidden;
 	display: none;
 }
-#cont_wrap .bottom .collec_wrap li img.over {
+.cont_wrap .bottom .collec_wrap li img.over {
 	position: absolute;
 	left: 0;
 	top: 0;
@@ -285,7 +339,7 @@
 	opacity: 0;
 	transition: opacity 0.4s;
 }
-#cont_wrap .bottom .review {
+.cont_wrap .bottom .review {
 	float: left;
 	position: relative;
 	overflow: hidden;
@@ -293,17 +347,17 @@
 	/* height: 200px; */
 	transition: 0.4s;
 }
-#cont_wrap .bottom .review li {
+.cont_wrap .bottom .review li {
 	float: left;
 	overflow: hidden;
 }
-#cont_wrap .bottom .review li a {
+.cont_wrap .bottom .review li a {
 	display: block;
 	width: 200px;
 	height: 200px;
 	overflow: hidden;
 	transition: 0.4s;
 }
-#cont_wrap .bottom .review li a:hover img {
+.cont_wrap .bottom .review li a:hover img {
 	transform: scale(1.1);
 }
